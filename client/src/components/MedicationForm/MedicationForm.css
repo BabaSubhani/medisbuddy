@@ -1,0 +1,77 @@
+.medication-form-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.medication-form {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.medication-form__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.medication-form__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.medication-form__form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+.medication-form__form input,
+.medication-form__form select,
+.medication-form__form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.medication-form__form textarea {
+  resize: vertical;
+}
+
+.error {
+  border-color: red;
+}
+
+.error-msg {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+.medication-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.medication-form__actions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.medication-form__actions button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}

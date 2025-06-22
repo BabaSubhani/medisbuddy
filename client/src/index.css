@@ -1,0 +1,48 @@
+/* index.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Base CSS Variables */
+:root {
+  --color-primary: #3b82f6;
+  --color-primary-dark: #2563eb;
+  --color-secondary: #a78bfa;
+  --color-error: #ef4444;
+}
+
+/* Theme: Light */
+[data-theme="light"] {
+  --color-bg-primary: #ffffff;
+  --color-text-primary: #1f2937;
+  --color-text-secondary: #6b7280;
+  --color-border: #d1d5db;
+  --color-error: #ef4444;
+  background-color: #f9fafb;
+  color: var(--color-text-primary);
+}
+
+/* Theme: Dark */
+[data-theme="dark"] {
+  --color-bg-primary: #1f2937;
+  --color-text-primary: #f3f4f6;
+  --color-text-secondary: #9ca3af;
+  --color-border: #374151;
+  --color-error: #f87171;
+  background-color: #111827;
+  color: var(--color-text-primary);
+}
+
+/* Body styles */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Code fonts */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

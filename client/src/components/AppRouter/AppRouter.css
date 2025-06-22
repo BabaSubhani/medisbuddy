@@ -1,0 +1,13 @@
+.app-router {
+  min-height: 100vh;
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+.app-router__loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--color-bg-primary);
+}

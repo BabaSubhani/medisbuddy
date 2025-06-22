@@ -1,0 +1,84 @@
+### 🌐 Health Check
+GET https://medisbuddy-server.onrender.com/api/health
+
+###
+
+### 🧑‍💻 Signup
+POST https://medisbuddy-server.onrender.com/api/auth/signup
+Content-Type: application/json
+
+{
+  "email": "subbu@example.com",
+  "password": "subbu123",
+  "name": "Subbu",
+  "role": "patient"
+}
+
+###
+
+### 🔐 Login
+POST https://medisbuddy-server.onrender.com/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "subbu@example.com",
+  "password": "subbu123"
+}
+
+# 🔑 Copy the `token` from login response and paste in the Authorization below
+###
+
+### 💊 Get Medications (userId = 1)
+GET https://medisbuddy-server.onrender.com/api/meds/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoic3ViYnVAZXhhbXBsZS5jb20iLCJyb2xlIjoicGF0aWVudCIsImlhdCI6MTc1MDQyODA2NCwiZXhwIjoxNzUxMDMyODY0fQ.u4l5GSCqMjaW1qHkVOMBp6wungRTho4y_KY8DIh0vVg
+
+###
+
+### ➕ Add Medication
+POST https://medisbuddy-server.onrender.com/api/meds
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoic3ViYnVAZXhhbXBsZS5jb20iLCJyb2xlIjoicGF0aWVudCIsImlhdCI6MTc1MDQyODA2NCwiZXhwIjoxNzUxMDMyODY0fQ.u4l5GSCqMjaW1qHkVOMBp6wungRTho4y_KY8DIh0vVg
+
+{
+  "name": "Paracetamol",
+  "dosage": "500mg",
+  "frequency": "Twice a day",
+  "instructions": "After food"
+}
+
+###
+
+### ✏️ Update Medication (Replace `1` with real med ID)
+PUT https://medisbuddy-server.onrender.com/api/meds/1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "Paracetamol",
+  "dosage": "650mg",
+  "frequency": "Once a day",
+  "instructions": "After lunch"
+}
+
+###
+
+### ❌ Delete Medication (Replace `1` with med ID)
+DELETE https://medisbuddy-server.onrender.com/api/meds/1
+Authorization: Bearer {{token}}
+
+###
+
+### 📋 Log Medication Taken (medId = 1)
+POST https://medisbuddy-server.onrender.com/api/meds/1/log
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "notes": "Taken after breakfast"
+}
+
+###
+
+### 🧾 Get Medication Logs
+GET https://medisbuddy-server.onrender.com/api/meds/1/logs?days=7
+Authorization: Bearer {{token}}

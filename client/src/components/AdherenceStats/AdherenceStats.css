@@ -1,0 +1,239 @@
+.adherence-stats__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 300px;
+  color: var(--color-text-secondary);
+}
+
+.adherence-stats__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 300px;
+  gap: 1rem;
+}
+
+.adherence-stats__empty-icon {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-text-secondary);
+}
+
+.adherence-stats__empty h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.adherence-stats__empty p {
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.adherence-stats__overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.adherence-stats__card {
+  background: var(--color-bg-primary);
+  border: 2px solid var(--color-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.adherence-stats__card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.adherence-stats__card--primary {
+  border-color: var(--color-primary);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, transparent 100%);
+}
+
+.adherence-stats__card--secondary {
+  border-color: var(--color-secondary);
+  background: linear-gradient(135deg, rgba(20, 184, 166, 0.05) 0%, transparent 100%);
+}
+
+.adherence-stats__card--accent {
+  border-color: var(--color-warning);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, transparent 100%);
+}
+
+.adherence-stats__card--success {
+  border-color: var(--color-success);
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.05) 0%, transparent 100%);
+}
+
+.adherence-stats__card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.adherence-stats__card-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-primary);
+}
+
+.adherence-stats__card--secondary .adherence-stats__card-icon {
+  color: var(--color-secondary);
+}
+
+.adherence-stats__card--accent .adherence-stats__card-icon {
+  color: var(--color-warning);
+}
+
+.adherence-stats__card--success .adherence-stats__card-icon {
+  color: var(--color-success);
+}
+
+.adherence-stats__card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.adherence-stats__card-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.adherence-stats__card-subtitle {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+.adherence-stats__detailed {
+  background: var(--color-bg-primary);
+  border: 2px solid var(--color-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.adherence-stats__section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 1.5rem 0;
+}
+
+.adherence-stats__medication-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.adherence-stats__medication-item {
+  padding: 1rem;
+  background: var(--color-bg-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+}
+
+.adherence-stats__medication-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.adherence-stats__medication-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.adherence-stats__medication-percentage {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.adherence-stats__medication-percentage--good {
+  color: var(--color-success);
+}
+
+.adherence-stats__medication-percentage--moderate {
+  color: var(--color-warning);
+}
+
+.adherence-stats__medication-percentage--poor {
+  color: var(--color-error);
+}
+
+.adherence-stats__medication-bar {
+  height: 8px;
+  background: var(--color-bg-primary);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.adherence-stats__medication-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-success), var(--color-primary));
+  border-radius: 4px;
+}
+
+.adherence-stats__medication-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.adherence-stats__medication-detail {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 600px) {
+  .adherence-stats__overview {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .adherence-stats__card {
+    padding: 1rem;
+  }
+
+  .adherence-stats__card-value {
+    font-size: 2rem;
+  }
+
+  .adherence-stats__detailed {
+    padding: 1rem;
+  }
+
+  .adherence-stats__medication-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .adherence-stats__medication-percentage {
+    align-self: flex-end;
+  }
+
+  .adherence-stats__medication-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}
